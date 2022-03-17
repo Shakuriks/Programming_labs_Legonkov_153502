@@ -6,8 +6,23 @@ using System.Threading.Tasks;
 
 namespace Task1
 {
-    class Task1
+    public class Task1cl
     {
+        public bool isEquilateral(double a, double b, double c)
+        {
+            bool isEq;
+
+            if (a == b && b == c && a == c)
+            {
+                isEq = true;
+            }
+            else
+            {
+                isEq = false;
+            }
+
+            return isEq;
+        }
         static void Main(string[] args)
         {
             bool cont = true;
@@ -22,7 +37,11 @@ namespace Task1
                 b = Convert.ToDouble(Console.ReadLine());
                 c = Convert.ToDouble(Console.ReadLine());
 
-                if (a == b && b == c && a == c)
+                Console.WriteLine(a);
+
+                Task1cl method = new Task1cl();
+
+                if (method.isEquilateral(a, b, c))
                 {
                     Console.WriteLine("Треугольник равносторонний");
                 }
@@ -48,8 +67,6 @@ namespace Task1
                         cont = false;
                         break;
                 }
-
-
             }
         }
     }

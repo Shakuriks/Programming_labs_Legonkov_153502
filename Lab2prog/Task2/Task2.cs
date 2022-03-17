@@ -6,8 +6,19 @@ using System.Threading.Tasks;
 
 namespace Task2
 {
-    class Task2
+    public class Task2cl
     {
+        public double mod(double x)
+        {
+            double modx;
+
+            if (x >= 0)
+                modx = x;
+            else
+                modx = -x;
+
+            return modx;
+        }
         static void Main(string[] args)
         {
             bool cont = true;
@@ -18,11 +29,8 @@ namespace Task2
                 Console.WriteLine("Введите y");
                 double y = Convert.ToDouble(Console.ReadLine());
 
-                double modx;
-                if (x >= 0)
-                    modx = x;
-                else
-                    modx = -x;
+                Task2cl method = new Task2cl();
+                double modx = method.mod(x);
 
                 if (y > modx && x * x + y * y < 225)
                     Console.WriteLine("Да");

@@ -1,0 +1,7 @@
+C:\Users\LegonkovNikita\source\repos\Lab6prog\Lab6prog\bin\Debug\Lab6prog.exe.config
+C:\Users\LegonkovNikita\source\repos\Lab6prog\Lab6prog\bin\Debug\Lab6prog.exe
+C:\Users\LegonkovNikita\source\repos\Lab6prog\Lab6prog\bin\Debug\Lab6prog.pdb
+C:\Users\LegonkovNikita\source\repos\Lab6prog\Lab6prog\obj\Debug\Lab6prog.csproj.AssemblyReference.cache
+C:\Users\LegonkovNikita\source\repos\Lab6prog\Lab6prog\obj\Debug\Lab6prog.csproj.CoreCompileInputs.cache
+C:\Users\LegonkovNikita\source\repos\Lab6prog\Lab6prog\obj\Debug\Lab6prog.exe
+C:\Users\LegonkovNikita\source\repos\Lab6prog\Lab6prog\obj\Debug\Lab6prog.pdb

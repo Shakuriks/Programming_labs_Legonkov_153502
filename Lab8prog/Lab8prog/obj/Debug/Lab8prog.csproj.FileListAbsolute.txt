@@ -1,0 +1,7 @@
+C:\Users\LegonkovNikita\source\repos\Lab8prog\Lab8prog\obj\Debug\Lab8prog.csproj.AssemblyReference.cache
+C:\Users\LegonkovNikita\source\repos\Lab8prog\Lab8prog\obj\Debug\Lab8prog.csproj.CoreCompileInputs.cache
+C:\Users\LegonkovNikita\source\repos\Lab8prog\Lab8prog\bin\Debug\Lab8prog.exe.config
+C:\Users\LegonkovNikita\source\repos\Lab8prog\Lab8prog\bin\Debug\Lab8prog.exe
+C:\Users\LegonkovNikita\source\repos\Lab8prog\Lab8prog\bin\Debug\Lab8prog.pdb
+C:\Users\LegonkovNikita\source\repos\Lab8prog\Lab8prog\obj\Debug\Lab8prog.exe
+C:\Users\LegonkovNikita\source\repos\Lab8prog\Lab8prog\obj\Debug\Lab8prog.pdb

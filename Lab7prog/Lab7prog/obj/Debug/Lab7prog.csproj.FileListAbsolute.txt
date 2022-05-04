@@ -1,0 +1,7 @@
+C:\Users\LegonkovNikita\source\repos\Lab7prog\Lab7prog\bin\Debug\Lab7prog.exe.config
+C:\Users\LegonkovNikita\source\repos\Lab7prog\Lab7prog\bin\Debug\Lab7prog.exe
+C:\Users\LegonkovNikita\source\repos\Lab7prog\Lab7prog\bin\Debug\Lab7prog.pdb
+C:\Users\LegonkovNikita\source\repos\Lab7prog\Lab7prog\obj\Debug\Lab7prog.csproj.AssemblyReference.cache
+C:\Users\LegonkovNikita\source\repos\Lab7prog\Lab7prog\obj\Debug\Lab7prog.csproj.CoreCompileInputs.cache
+C:\Users\LegonkovNikita\source\repos\Lab7prog\Lab7prog\obj\Debug\Lab7prog.exe
+C:\Users\LegonkovNikita\source\repos\Lab7prog\Lab7prog\obj\Debug\Lab7prog.pdb

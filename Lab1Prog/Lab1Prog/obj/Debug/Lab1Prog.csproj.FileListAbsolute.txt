@@ -1,0 +1,8 @@
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab1Prog\bin\Debug\Lab1Prog.exe.config
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab1Prog\bin\Debug\Lab1Prog.exe
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab1Prog\bin\Debug\Lab1Prog.pdb
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab1Prog\obj\Debug\Lab1Prog.csproj.AssemblyReference.cache
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab1Prog\obj\Debug\Lab1Prog.csproj.SuggestedBindingRedirects.cache
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab1Prog\obj\Debug\Lab1Prog.csproj.CoreCompileInputs.cache
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab1Prog\obj\Debug\Lab1Prog.exe
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab1Prog\obj\Debug\Lab1Prog.pdb

@@ -22,7 +22,8 @@ namespace Lab1progTests
 
         public void TestMethod2()
         {
-            company.AddJobForWorker("Anton", "job", 10);
+            company.AddJob("job", 10);
+            company.AddJobForWorker("Anton", "job");
 
             int expected = 10;
             int actual = company.SearchForPayment("Anton");
@@ -35,10 +36,12 @@ namespace Lab1progTests
         public void TestMethod3()
         {
             company.AddWorker("Kirill");
-            company.AddJobForWorker("Kirill", "wash", 100);
-            company.AddJobForWorker("Kirill", "cleaning", 999);
+            company.AddJob("wash", 100);
+            company.AddJob("cleaning", 10999);
+            company.AddJobForWorker("Kirill", "wash");
+            company.AddJobForWorker("Kirill", "cleaning");
 
-            int expected = 1099;
+            int expected = 11099;
             int actual = company.SearchForPayment("Kirill");
 
             Assert.AreEqual(expected, actual);
@@ -49,8 +52,10 @@ namespace Lab1progTests
         public void TestMethod4()
         {
             company.AddWorker("Vadim");
-            company.AddJobForWorker("Vadim", "play", 1);
-            company.AddJobForWorker("Vadim", "fight", 1);
+            company.AddJob("play", 1);
+            company.AddJob("fight", 1);
+            company.AddJobForWorker("Vadim", "play");
+            company.AddJobForWorker("Vadim", "fight");
 
             int expected = 2;
             int actual = company.SearchForPayment("Vadim");
@@ -62,7 +67,7 @@ namespace Lab1progTests
 
         public void TestMethod5()
         {
-            string expected = "play fight ";
+            string expected = "fight; play; ";
             string actual = company.SearchForTitles("Vadim");
 
             Assert.AreEqual(expected, actual);
@@ -72,7 +77,7 @@ namespace Lab1progTests
 
         public void TestMethod6()
         {
-            string expected = "wash cleaning ";
+            string expected = "cleaning; wash; ";
             string actual = company.SearchForTitles("Kirill");
 
             Assert.AreEqual(expected, actual);
@@ -82,8 +87,8 @@ namespace Lab1progTests
 
         public void TestMethod7()
         {
-            int expected = 1111;
-            int actual = company.TotalPayment();
+            string expected = "Kirill";
+            string actual = company.MaxPaymentWorker();
 
             Assert.AreEqual(expected, actual);
         }
@@ -92,9 +97,7 @@ namespace Lab1progTests
 
         public void TestMethod8()
         {
-            company.AddJobForWorker("Vadim", "secretary", 5);
-
-            int expected = 1116;
+            int expected = 11111;
             int actual = company.TotalPayment();
 
             Assert.AreEqual(expected, actual);
@@ -104,8 +107,8 @@ namespace Lab1progTests
 
         public void TestMethod9()
         {
-            string expected = "job wash cleaning play fight secretary ";
-            string actual = company.TotalTitles();
+            int expected = 1;
+            int actual = company.PaymentMore(11000);
 
             Assert.AreEqual(expected, actual);
         }

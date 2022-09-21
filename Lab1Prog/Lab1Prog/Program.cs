@@ -13,15 +13,16 @@ namespace Lab1Prog
             HRD company = HRD.GetInstance();
             Console.WriteLine("Введите название компании");
             company.Name = Console.ReadLine();
-            Journal journal = new Journal();
 
-            company.WorkerAdded += journal.AddEvent;
-            company.WorkDone += title => Console.WriteLine($"Competed work: {title};");
+            company.AddJob("cleaning", 100);
+            company.AddJob("security", 450);
+            company.AddJob("secretary", 300);
             company.AddWorker("Vadim");
-            company.AddJobForWorker("Vadim", new Job("cleaning", 10));
-            company.AddJobForWorker("Vadim", "secretary", 100);
+            company.AddJobForWorker("Vadim", "cleaning");
+            company.AddJobForWorker("Vadim", "secretary");
             company.AddWorker("Alexandr");
-            company.AddJobForWorker("Alexandr", "security", 50);
+            company.AddJobForWorker("Alexandr", "security");
+            company.AddJobForWorker("Alexandr", "security");
             Console.WriteLine("Paymen for Vadim : ");
             Console.WriteLine(company.SearchForPayment("Vadim"));
             Console.WriteLine("Paymen for Alexandr : ");
@@ -32,11 +33,19 @@ namespace Lab1Prog
             Console.WriteLine(company.SearchForTitles("Alexandr"));
             Console.WriteLine("Total payment : ");
             Console.WriteLine(company.TotalPayment());
-            Console.WriteLine("Completed work : ");
+            Console.WriteLine("Types of jobs : ");
             Console.WriteLine(company.TotalTitles());
-            company.GenerateIndexOutOfRangeException();
-            company.ElementWasNotFoundException();
-            journal.Print();
+            Console.WriteLine("Worker with max payment : ");
+            Console.WriteLine(company.MaxPaymentWorker());
+            Console.WriteLine("Count of workers, which have payment more than 430");
+            Console.WriteLine(company.PaymentMore(430));
+            Console.WriteLine("SalaryList of Vadim : ");
+            Console.WriteLine(company.SalaryList("Vadim"));
+            Console.WriteLine("SalaryList of Alexandr : ");
+            Console.WriteLine(company.SalaryList("Alexandr"));
+            //company.GenerateIndexOutOfRangeException();
+            //company.ElementWasNotFoundException();
+            company.journal.Print();
 
             Console.ReadKey();
         }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Lab1Prog.Collections;
 
 namespace Lab1Prog.Entities
@@ -18,7 +19,7 @@ namespace Lab1Prog.Entities
             set { secondName = value; }
         }
 
-        MyCustomCollection<Job> lstJobs = new MyCustomCollection<Job>();
+        List<Job> lstJobs = new List<Job>();
 
         public void AddJob(string title, int payment)
         {
@@ -32,26 +33,40 @@ namespace Lab1Prog.Entities
 
         public int Payment()
         {
-            int result = 0;
-            foreach (Job job in lstJobs)
-            {
-                result += job.Payment;
-            }
-            return result;
+            return lstJobs.Select(item => item.Payment).Sum();
         }
 
         public string Titles()
         {
+            var orderByCollection = lstJobs.OrderBy(item => item.Title).Select(item => item.Title);
+
+            var result = "";
+            foreach (var item in orderByCollection)
+            {
+                result += item + "; ";
+            }
+            return result;
+        }
+
+        public string SalaryList()
+        {
             string result = "";
 
-            foreach (Job job in lstJobs)
+            var groupByCollection = lstJobs.GroupBy(item => item.Title);
+
+            foreach(var t in groupByCollection)
             {
-                result += job.Title + " ";
+                result += $"{t.Key} : ";
+
+                foreach (var p in t)
+                {
+                    result += p.Payment.ToString() + "; ";
+                }
+
+                result += '\n';
             }
 
             return result;
         }
-
-
     }
 }

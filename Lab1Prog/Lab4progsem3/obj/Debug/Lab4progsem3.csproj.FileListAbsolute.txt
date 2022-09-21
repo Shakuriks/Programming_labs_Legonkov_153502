@@ -1,0 +1,8 @@
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab4progsem3\bin\Debug\Lab4progsem3.exe.config
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab4progsem3\bin\Debug\Lab4progsem3.exe
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab4progsem3\bin\Debug\Lab4progsem3.pdb
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab4progsem3\obj\Debug\Lab4progsem3.csproj.AssemblyReference.cache
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab4progsem3\obj\Debug\Lab4progsem3.csproj.SuggestedBindingRedirects.cache
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab4progsem3\obj\Debug\Lab4progsem3.csproj.CoreCompileInputs.cache
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab4progsem3\obj\Debug\Lab4progsem3.exe
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab4progsem3\obj\Debug\Lab4progsem3.pdb

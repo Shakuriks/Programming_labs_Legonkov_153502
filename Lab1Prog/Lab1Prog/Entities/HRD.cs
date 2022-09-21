@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Lab1Prog.Entities;
 using System.Text;
 using System.Threading.Tasks;
 using Lab1Prog.Collections;
@@ -13,9 +14,13 @@ namespace Lab1Prog.Entities
     {
         public event WorkerAddedDelegate WorkerAdded;
         public event WorkDoneDelegate WorkDone;
+
+        public Journal journal = new Journal();
+        
         private HRD()
         {
-
+            WorkerAdded += journal.AddEvent;
+            WorkDone += title => Console.WriteLine($"Competed work: {title};");
         }
 
         private static HRD _instance;
@@ -37,8 +42,18 @@ namespace Lab1Prog.Entities
             set { name = value; }
         }
 
-        MyCustomCollection<Worker> lstWorkers = new MyCustomCollection<Worker>();
-        MyCustomCollection<Job> lstJobs = new MyCustomCollection<Job>();
+        List<Worker> lstWorkers = new List<Worker>();
+        Dictionary<string, int> Jobs = new Dictionary<string, int>();
+
+        public string PrintWorkDone(string title)
+        {
+            return $"Competed work: {title};";
+        }
+
+        public void AddJob(string title, int payment)
+        {
+            Jobs.Add(title, payment);
+        }
 
 
         public void AddWorker(string secondName)
@@ -47,68 +62,85 @@ namespace Lab1Prog.Entities
             WorkerAdded(secondName);
         }
 
-        public void AddJobForWorker(string secondName, Job job)
-        {
-            foreach (Worker worker in lstWorkers)
-            {
-                if (worker.SecondName == secondName)
-                    worker.AddJob(job);
-            }
-            lstJobs.Add(job);
-            WorkDone(job.Title);
-        }
+        //public void AddJobForWorker(string secondName, Job job)
+        //{
+        //    foreach (Worker worker in lstWorkers)
+        //    {
+        //        if (worker.SecondName == secondName)
+        //            worker.AddJob(job);
+        //    }
+        //    lstJobs.Add(job);
+        //    WorkDone?.Invoke(job.Title);
+        //}
 
-        public void AddJobForWorker(string secondName, string title, int payment)
+        public void AddJobForWorker(string secondName, string title)
         {
-            foreach (Worker worker in lstWorkers)
+            if (Jobs.ContainsKey(title) && lstWorkers.FirstOrDefault(item => item.SecondName == secondName) != null)
             {
-                if (worker.SecondName == secondName)
-                    worker.AddJob(title, payment);
+                var newJob = new Job(title, Jobs.First(item => item.Key == title).Value);
+                lstWorkers.First(item => item.SecondName == secondName).AddJob(newJob);
+                WorkDone?.Invoke(title);
             }
-            lstJobs.Add(new Job(title, payment));
-            WorkDone(title);
         }
 
         public int SearchForPayment(string secondName)
         {
-            foreach (Worker worker in lstWorkers)
-            {
-                if (worker.SecondName == secondName)
-                    return worker.Payment();
-            }
-            return -1;
+            if (lstWorkers.FirstOrDefault(item => item.SecondName == secondName) != null)
+                return lstWorkers.First(item => item.SecondName == secondName).Payment();
+            else
+                return -1;
         }
 
         public string SearchForTitles(string secondName)
         {
-            foreach (Worker worker in lstWorkers)
-            {
-                if (worker.SecondName == secondName)
-                    return worker.Titles();
-            }
-            return "";
+            if (lstWorkers.FirstOrDefault(item => item.SecondName == secondName) != null)
+                return lstWorkers.First(item => item.SecondName == secondName).Titles();
+            else
+                return "";
         }
 
         public int TotalPayment()
         {
-            int result = 0;
-            foreach (Worker worker in lstWorkers)
-            {
-                result += worker.Payment();
-            }
-            return result;
+            return lstWorkers.Select(item => item.Payment()).Sum();
         }
 
         public string TotalTitles()
         {
-            string result = "";
-            foreach (Job j in lstJobs)
+            var orderByCollection = Jobs.OrderBy(item => item.Value)
+                                        .Select(item => item.Key);
+                                        
+            var result = "";
+            foreach (var item in orderByCollection)
             {
-                result += j.Title + " ";
+                result += item + "; ";
             }
             return result;
         }
 
+        public string MaxPaymentWorker()
+        {
+            //return lstWorkers.OrderBy(item => item.Payment())
+            //                 .FirstOrDefault().SecondName;
+            if (lstWorkers.FirstOrDefault(item => item.Payment() == lstWorkers.Max(item2 => item2.Payment())) != null)
+                return lstWorkers.First(item => item.Payment() == lstWorkers.Max(item2 => item2.Payment())).SecondName;
+            else
+                return "";
+        }
+
+        public int PaymentMore(int p)
+        {
+            return lstWorkers.Aggregate(0, (total, next) => next.Payment() > p ? total + 1 : total);
+        }
+
+        public string SalaryList(string secondName)
+        {
+            if (lstWorkers.FirstOrDefault(item => item.SecondName == secondName) != null)
+            {
+                return lstWorkers.First(item => item.SecondName == secondName).SalaryList();
+            }
+            else
+                return "";
+        }
         public void GenerateIndexOutOfRangeException()
         {
             Worker temp = new Worker("SecondName");

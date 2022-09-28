@@ -13,30 +13,50 @@ namespace Lab5prog
         static void Main(string[] args)
         {
             var rnd = new Random();
-            var bagages = new List<Bagage>();
-            for (int i = 0; i < 5; i++)
+            var bagageSpaces = new List<BagageSpace>();
+            for(var i = 0; i < 5; i++)
             {
-                bagages.Add(new Bagage() { Id = rnd.Next(0, 1000), Weight = rnd.Next(0, 70) });
+                var bagages = new List<Bagage>();
+                for (var j = 0; j < 5; j++)
+                {
+                    bagages.Add(new Bagage() { Id = rnd.Next(0, 1000), Weight = rnd.Next(0, 70) });
+                }
+                bagageSpaces.Add(new BagageSpace(bagages));
             }
-            var BS = new BagageSpace(bagages);
             Console.WriteLine("Old Bagage space:\n");
-            Console.WriteLine(BS.Print());
+            foreach(var item in bagageSpaces)
+            {
+                Console.WriteLine(item.Print());
+                Console.WriteLine("\n\n\n");
+            }
             var serializer = new Serializer();
 
-            serializer.SerializeXML(BS, @"C:\Музыка\BagageSpace.xml");
-            var newXmlBS = (BagageSpace)serializer.DeSerializeXML(@"C:\Музыка\BagageSpace.xml");
+            serializer.SerializeXML(bagageSpaces, @"C:\Музыка\BagageSpace.xml");
+            var newXmlBS = (List<BagageSpace>)serializer.DeSerializeXML(@"C:\Музыка\BagageSpace.xml");
             Console.WriteLine("New xml Bagage space:\n");
-            Console.WriteLine(newXmlBS.Print());
+            foreach (var item in newXmlBS)
+            {
+                Console.WriteLine(item.Print());
+                Console.WriteLine("\n\n\n");
+            }
 
-            serializer.SerializeJSON(BS, @"C:\Музыка\BagageSpace.json");
-            var newJsonBS = (BagageSpace)serializer.DeSerializeJSON(@"C:\Музыка\BagageSpace.json");
+            serializer.SerializeJSON(bagageSpaces, @"C:\Музыка\BagageSpace.json");
+            var newJsonBS = (List<BagageSpace>)serializer.DeSerializeJSON(@"C:\Музыка\BagageSpace.json");
             Console.WriteLine("New json Bagage space:\n");
-            Console.WriteLine(newJsonBS.Print());
+            foreach (var item in newJsonBS)
+            {
+                Console.WriteLine(item.Print());
+                Console.WriteLine("\n\n\n");
+            }
 
-            serializer.SerializeByLINQ(BS, @"C:\Музыка\BagageSpaceByLINQ.xml");
-            var newLinqBS = (BagageSpace)serializer.DeSerializeByLINQ(@"C:\Музыка\BagageSpaceByLINQ.xml");
+            serializer.SerializeByLINQ(bagageSpaces, @"C:\Музыка\BagageSpaceByLINQ.xml");
+            var newLinqBS = (List<BagageSpace>)serializer.DeSerializeByLINQ(@"C:\Музыка\BagageSpaceByLINQ.xml");
             Console.WriteLine("New linq Bagage space:\n");
-            Console.WriteLine(newLinqBS.Print());
+            foreach (var item in newLinqBS)
+            {
+                Console.WriteLine(item.Print());
+                Console.WriteLine("\n\n\n");
+            }
 
             Console.ReadLine();
         }

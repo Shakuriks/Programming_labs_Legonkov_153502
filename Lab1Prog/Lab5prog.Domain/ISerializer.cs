@@ -8,11 +8,11 @@ namespace Lab5prog.Domain
 {
     public interface ISerializer
     {
-        IEnumerable<Bagage> DeSerializeByLINQ(string fileName);
-        IEnumerable<Bagage> DeSerializeXML(string fileName);
-        IEnumerable<Bagage> DeSerializeJSON(string fileName);
-        void SerializeByLINQ(IEnumerable<Bagage> collection, string fileName);
-        void SerializeXML(IEnumerable<Bagage> collection, string fileName);
-        void SerializeJSON(IEnumerable<Bagage> collection, string fileName);
+        IEnumerable<BagageSpace> DeSerializeByLINQ(string fileName);
+        IEnumerable<BagageSpace> DeSerializeXML(string fileName);
+        IEnumerable<BagageSpace> DeSerializeJSON(string fileName);
+        void SerializeByLINQ(IEnumerable<BagageSpace> collection, string fileName);
+        void SerializeXML(IEnumerable<BagageSpace> collection, string fileName);
+        void SerializeJSON(IEnumerable<BagageSpace> collection, string fileName);
     }
 }

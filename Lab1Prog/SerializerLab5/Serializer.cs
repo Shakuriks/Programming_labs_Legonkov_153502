@@ -11,40 +11,46 @@ namespace SerializerLab5
 {
     public class Serializer : ISerializer
     {
-        public IEnumerable<Bagage> DeSerializeByLINQ(string fileName)
+        public IEnumerable<BagageSpace> DeSerializeByLINQ(string fileName)
         {
             var bagagesData = XElement.Load(fileName);
-            var newCollection = new BagageSpace();
-            var data = bagagesData.Descendants("Bagage");
+            var data = bagagesData.Descendants("BagageSpace");
+            var bagageSpaces = new List<BagageSpace>();
             foreach(var b in data)
             {
-                newCollection.Add(new Bagage() { Id = (int)b.Element("Id"), Weight = (int)b.Element("Weight") });
+                var bs = new BagageSpace();
+                var info = b.Descendants("Bagage");
+                foreach(var item in info)
+                {
+                    bs.Add(new Bagage() { Id = (int)item.Element("Id"), Weight = (int)item.Element("Weight") });
+                }
+                bagageSpaces.Add(bs);
             }
 
-            return newCollection;
+            return bagageSpaces;
         }
 
-        public IEnumerable<Bagage> DeSerializeJSON(string fileName)
+        public IEnumerable<BagageSpace> DeSerializeJSON(string fileName)
         {
-            var jsonFormatter = new DataContractJsonSerializer(typeof(BagageSpace));
+            var jsonFormatter = new DataContractJsonSerializer(typeof(List<BagageSpace>));
             using (FileStream fs = new FileStream(fileName, FileMode.OpenOrCreate))
             {
-                var newColl = jsonFormatter.ReadObject(fs) as BagageSpace;
+                var newColl = jsonFormatter.ReadObject(fs) as List<BagageSpace>;
                 return newColl;
             }
         }
 
-        public IEnumerable<Bagage> DeSerializeXML(string fileName)
+        public IEnumerable<BagageSpace> DeSerializeXML(string fileName)
         {
-            XmlSerializer formatter = new XmlSerializer(typeof(BagageSpace));
+            XmlSerializer formatter = new XmlSerializer(typeof(List<BagageSpace>));
             using (FileStream fs = new FileStream(fileName, FileMode.OpenOrCreate))
             {
-                var newColl = formatter.Deserialize(fs) as BagageSpace;
+                var newColl = formatter.Deserialize(fs) as List<BagageSpace>;
                 return newColl;
             }
         }
 
-        public void SerializeByLINQ(IEnumerable<Bagage> collection, string fileName)
+        public void SerializeByLINQ(IEnumerable<BagageSpace> collection, string fileName)
         {
             var file = new FileInfo(fileName);
             if (file.Exists)
@@ -52,34 +58,39 @@ namespace SerializerLab5
             var data = new List<string>();
             foreach (var b in collection)
             {
-                data.Add(new XElement("Bagage",
-                                new XElement("Id", b.Id.ToString()),
-                                new XElement("Weight", b.Weight.ToString())
-                                ).ToString());
+                data.Add("<BagageSpace>");
+                foreach(var item in b.GetCollection())
+                {
+                    data.Add(new XElement("Bagage",
+                            new XElement("Id", item.Id.ToString()),
+                            new XElement("Weight", item.Weight.ToString())
+                            ).ToString());
+                }
+                data.Add("</BagageSpace>");
             }
-            data.Insert(0, "<BagageSpace>");
-            data.Add("</BagageSpace>");
+            data.Insert(0, "<BagageSpaces>");
+            data.Add("</BagageSpaces>");
             File.WriteAllLines(fileName, data);
         }
 
-        public void SerializeJSON(IEnumerable<Bagage> collection, string fileName)
+        public void SerializeJSON(IEnumerable<BagageSpace> collection, string fileName)
         {
             var file = new FileInfo(fileName);
             if (file.Exists)
                 file.Delete();
-            var jsonFormatter = new DataContractJsonSerializer(typeof(BagageSpace));
+            var jsonFormatter = new DataContractJsonSerializer(typeof(List<BagageSpace>));
             using (FileStream fs = new FileStream(fileName, FileMode.OpenOrCreate))
             {
                 jsonFormatter.WriteObject(fs, collection);
             }
         }
 
-        public void SerializeXML(IEnumerable<Bagage> collection, string fileName)
+        public void SerializeXML(IEnumerable<BagageSpace> collection, string fileName)
         {
             var file = new FileInfo(fileName);
             if (file.Exists)
                 file.Delete();
-            XmlSerializer formatter = new XmlSerializer(typeof(BagageSpace));
+            XmlSerializer formatter = new XmlSerializer(typeof(List<BagageSpace>));
             using (FileStream fs = new FileStream(fileName, FileMode.OpenOrCreate))
             {
                 formatter.Serialize(fs, collection);

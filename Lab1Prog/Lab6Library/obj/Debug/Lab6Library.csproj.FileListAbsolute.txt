@@ -1,0 +1,10 @@
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab6Library\bin\Debug\Lab6Library.dll
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab6Library\bin\Debug\Lab6Library.pdb
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab6Library\bin\Debug\Lab6prog.exe
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab6Library\bin\Debug\Lab6prog.pdb
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab6Library\bin\Debug\Lab6prog.exe.config
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab6Library\obj\Debug\Lab6Library.csproj.AssemblyReference.cache
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab6Library\obj\Debug\Lab6Library.csproj.CoreCompileInputs.cache
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab6Library\obj\Debug\Lab6Library.csproj.CopyComplete
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab6Library\obj\Debug\Lab6Library.dll
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab6Library\obj\Debug\Lab6Library.pdb

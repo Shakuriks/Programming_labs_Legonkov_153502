@@ -1,0 +1,8 @@
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab6prog\bin\Debug\Lab6prog.exe.config
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab6prog\bin\Debug\Lab6prog.exe
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab6prog\bin\Debug\Lab6prog.pdb
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab6prog\obj\Debug\Lab6prog.csproj.AssemblyReference.cache
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab6prog\obj\Debug\Lab6prog.csproj.SuggestedBindingRedirects.cache
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab6prog\obj\Debug\Lab6prog.csproj.CoreCompileInputs.cache
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab6prog\obj\Debug\Lab6prog.exe
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab6prog\obj\Debug\Lab6prog.pdb

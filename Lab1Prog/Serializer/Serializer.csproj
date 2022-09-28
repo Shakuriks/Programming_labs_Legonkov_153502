@@ -6,8 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Lab5progsem3.Domain\Lab5progsem3.Domain.csproj" />
-  </ItemGroup>
-
 </Project>

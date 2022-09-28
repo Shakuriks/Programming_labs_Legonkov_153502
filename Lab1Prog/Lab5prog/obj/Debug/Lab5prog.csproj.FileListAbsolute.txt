@@ -1,0 +1,13 @@
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab5prog\bin\Debug\Lab5prog.exe.config
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab5prog\bin\Debug\Lab5prog.exe
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab5prog\bin\Debug\Lab5prog.pdb
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab5prog\bin\Debug\Lab5prog.Domain.dll
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab5prog\bin\Debug\SerializerLab5.dll
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab5prog\bin\Debug\Lab5prog.Domain.pdb
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab5prog\bin\Debug\SerializerLab5.pdb
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab5prog\obj\Debug\Lab5prog.csproj.AssemblyReference.cache
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab5prog\obj\Debug\Lab5prog.csproj.SuggestedBindingRedirects.cache
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab5prog\obj\Debug\Lab5prog.csproj.CoreCompileInputs.cache
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab5prog\obj\Debug\Lab5prog.csproj.CopyComplete
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab5prog\obj\Debug\Lab5prog.exe
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab5prog\obj\Debug\Lab5prog.pdb

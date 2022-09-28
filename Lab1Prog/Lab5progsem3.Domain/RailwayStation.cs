@@ -2,7 +2,6 @@
 
 namespace Lab5progsem3.Domain
 {
-    [Serializable]
     public class RailwayStation : IEnumerable
     {
         List<Bagage> bagages = new List<Bagage>();

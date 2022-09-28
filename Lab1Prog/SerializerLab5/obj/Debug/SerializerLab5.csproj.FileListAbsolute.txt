@@ -1,0 +1,11 @@
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\SerializerLab5\bin\Debug\SerializerLab5.dll
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\SerializerLab5\bin\Debug\SerializerLab5.pdb
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\SerializerLab5\bin\Debug\Lab5prog.Domain.dll
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\SerializerLab5\bin\Debug\Lab5prog.Domain.pdb
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\SerializerLab5\obj\Debug\SerializerLab5.csproj.AssemblyReference.cache
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\SerializerLab5\obj\Debug\SerializerLab5.csproj.CoreCompileInputs.cache
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\SerializerLab5\obj\Debug\SerializerLab5.csproj.CopyComplete
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\SerializerLab5\obj\Debug\SerializerLab5.dll
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\SerializerLab5\obj\Debug\SerializerLab5.pdb
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\SerializerLab5\bin\Debug\Newtonsoft.Json.dll
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\SerializerLab5\bin\Debug\Newtonsoft.Json.xml

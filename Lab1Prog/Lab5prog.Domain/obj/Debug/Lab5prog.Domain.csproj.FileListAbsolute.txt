@@ -1,0 +1,6 @@
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab5prog.Domain\bin\Debug\Lab5prog.Domain.dll
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab5prog.Domain\bin\Debug\Lab5prog.Domain.pdb
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab5prog.Domain\obj\Debug\Lab5prog.Domain.csproj.AssemblyReference.cache
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab5prog.Domain\obj\Debug\Lab5prog.Domain.csproj.CoreCompileInputs.cache
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab5prog.Domain\obj\Debug\Lab5prog.Domain.dll
+C:\Users\LegonkovNikita\source\repos\Lab1Prog\Lab5prog.Domain\obj\Debug\Lab5prog.Domain.pdb

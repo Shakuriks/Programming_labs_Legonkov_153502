@@ -3,19 +3,19 @@ using System.Xml.Serialization;
 
 namespace Serializer
 {
-    public class Serializer : ISerializer<RailwayStation>
+    public class Serializer : ISerializer
     {
-        public IEnumerable<RailwayStation> DeSerializeByLINQ(string fileName)
+        public IEnumerable<Bagage?> DeSerializeByLINQ(string fileName)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<RailwayStation> DeSerializeJSON(string fileName)
+        public IEnumerable<Bagage?> DeSerializeJSON(string fileName)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<RailwayStation> DeSerializeXML(string fileName)
+        public IEnumerable<Bagage?> DeSerializeXML(string fileName)
         {
             XmlSerializer formatter = new XmlSerializer(typeof(IEnumerable<RailwayStation>));
             using (FileStream fs = new FileStream(fileName, FileMode.OpenOrCreate))
@@ -24,19 +24,19 @@ namespace Serializer
             }
         }
 
-        public void SerializeByLINQ(IEnumerable<RailwayStation> collection, string fileName)
+        public void SerializeByLINQ(IEnumerable<Bagage> collection, string fileName)
         {
             throw new NotImplementedException();
         }
 
-        public void SerializeJSON(IEnumerable<RailwayStation> collection, string fileName)
+        public void SerializeJSON(IEnumerable<Bagage> collection, string fileName)
         {
             throw new NotImplementedException();
         }
 
-        public void SerializeXML(IEnumerable<RailwayStation> collection, string fileName)
+        public void SerializeXML(IEnumerable<Bagage> collection, string fileName)
         {
-            XmlSerializer formatter = new XmlSerializer(typeof(IEnumerable<RailwayStation>));
+            XmlSerializer formatter = new XmlSerializer(typeof(IEnumerable<Bagage>));
             using (FileStream fs = new FileStream(fileName, FileMode.OpenOrCreate))
             {
                 formatter.Serialize(fs, collection);
